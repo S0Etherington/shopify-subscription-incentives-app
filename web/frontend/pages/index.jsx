@@ -6,7 +6,7 @@ import {
   Page,
   SkeletonBodyText,
 } from "@shopify/polaris";
-
+import ViewSubscriptions from "../components/ViewSubscriptions";
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -26,7 +26,7 @@ export default function HomePage() {
   !isLoading && !codes?.length ? (
     <Card sectioned>
         <EmptyState 
-          heading="Create unique codes for your product"
+          heading="Test Test Test Test"
           action={{
             content: "Create",
             onAction: () => navigate("/codes/new"),
@@ -34,7 +34,7 @@ export default function HomePage() {
           image="https://cdn.shopify.com/s/files/1/0262/4071/2726/files/emptystate-files.png"
         >
           <p>
-            Use Codes!
+            Test
           </p>
         </EmptyState>
       </Card>
@@ -43,7 +43,7 @@ export default function HomePage() {
     return (
       <Page>
       <TitleBar
-        title="Codes"
+        title="Test"
         primaryAction={{
           content: "Create Code",
           onAction: () => navigate("codes/new"),
@@ -54,6 +54,7 @@ export default function HomePage() {
           {loadingMarkup}
           {emptyStateMarkup}
         </Layout.Section>
+        <ViewSubscriptions/>
       </Layout>
     </Page>
   );
