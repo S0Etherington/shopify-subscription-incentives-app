@@ -6,7 +6,7 @@ import {
   Page,
   SkeletonBodyText,
 } from "@shopify/polaris";
-import ViewSubscriptions from "../components/ViewSubscriptions";
+import { SubContracts } from "../../helpers/SubContracts";
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -39,6 +39,7 @@ export default function HomePage() {
         </EmptyState>
       </Card>
     ) : null;
+
     
     return (
       <Page>
@@ -54,7 +55,7 @@ export default function HomePage() {
           {loadingMarkup}
           {emptyStateMarkup}
         </Layout.Section>
-        <ViewSubscriptions/>
+        <SubContracts/>
       </Layout>
     </Page>
   );
